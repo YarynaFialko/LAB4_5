@@ -96,6 +96,19 @@ class Room():
         return self.direct[direction]
 
 
+class Character():
+    """Stores data about the character"""
+
+    def __init__(self, name):
+        """
+        Receives data about the character.
+        >>> char1 = Character("John")
+        >>> char1.name
+        'John'
+        """
+        self.name = name
+
+
 class Enemy():
     """Stores a data about an enemy."""
 
@@ -160,10 +173,23 @@ class Enemy():
         return len(self.room.defeated)
 
 
+class Friend():
+    """Stores data about the friend."""
+
+    def __init__(self, name):
+        """
+        Receives data about the friend.
+        >>> friend1 = Friend("Patrick")
+        >>> friend1.name
+        'Patrick'
+        """
+        self.name = name
+
+
 class Item():
     """Stores a data about an item."""
 
-    def __init__(self, item, description = None):
+    def __init__(self, item, description=None):
         """
         Receives input data of the item.
         >>> book1 = Item("book")
